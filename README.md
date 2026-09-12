@@ -38,11 +38,13 @@ Everything is saved to a database and browsable in a **History** page.
 
 **CLARIFY step** — what's understood vs. what needs clarifying, before anything is assumed:
 
-![Clarify step](./docs/screenshots/clarify-step.png)
+![Clarify step](<img width="1920" height="1020" alt="clarify-step" src="https://github.com/user-attachments/assets/7fedfbdf-a7bd-4360-bf2e-0725c052eb9b" />
+)
 
 **LEARN step** — results dashboard with metrics + equity curve, clearly labeled as simulated:
 
-![Learn dashboard](./docs/screenshots/learn-dashboard.png)
+![Learn dashboard](<img width="1920" height="1020" alt="learn-dashboard" src="https://github.com/user-attachments/assets/bc3e9374-5570-4c3f-876f-e88f965acd0f" />
+)
 
 ---
 
