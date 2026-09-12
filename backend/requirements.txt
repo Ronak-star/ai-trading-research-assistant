@@ -1,0 +1,26 @@
+# These are left unpinned (or loosely pinned) so pip can resolve versions
+# that actually ship prebuilt wheels for newer Python releases (e.g. 3.14).
+# If you need exact reproducible versions, pin them once you've confirmed
+# wheels exist for your Python version.
+
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.6
+sqlmodel>=0.0.22
+pydantic>=2.9.2
+python-dotenv>=1.0.1
+openai>=1.51.0
+
+# Left fully unpinned: on very new Python versions (3.13/3.14) only the
+# latest pandas/numpy releases have prebuilt wheels; pinning an older
+# version forces pip to compile from source (needs a C/C++ toolchain).
+pandas
+numpy
+
+# Optional: only needed if you actually connect to PostgreSQL.
+# psycopg2-binary does not yet ship wheels for every new Python version
+# the day it's released. The app works out-of-the-box on SQLite
+# (see backend/.env -> DATABASE_URL) without this package at all.
+# Uncomment once you're ready to use Postgres, ideally on Python 3.11/3.12
+# if 3.14 wheels aren't published yet:
+# psycopg2-binary>=2.9.9
+

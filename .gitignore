@@ -1,0 +1,50 @@
+# ==============================
+# Environment files (NEVER commit secrets)
+# ==============================
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# ==============================
+# Python / Backend
+# ==============================
+**/__pycache__/
+**/*.py[cod]
+**/*.egg-info/
+backend/venv/
+backend/.venv/
+backend/env/
+*.db
+*.sqlite3
+backend/trading_research.db
+
+# ==============================
+# Node / Frontend
+# ==============================
+**/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/.turbo/
+frontend/next-env.d.ts
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ==============================
+# Editor / OS
+# ==============================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ==============================
+# Misc
+# ==============================
+*.log
+.cache/
