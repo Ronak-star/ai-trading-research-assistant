@@ -34,6 +34,18 @@ Everything is saved to a database and browsable in a **History** page.
 
 ---
 
+## 🖼️ Screenshots
+
+**CLARIFY step** — what's understood vs. what needs clarifying, before anything is assumed:
+
+![Clarify step](./docs/screenshots/clarify-step.png)
+
+**LEARN step** — results dashboard with metrics + equity curve, clearly labeled as simulated:
+
+![Learn dashboard](./docs/screenshots/learn-dashboard.png)
+
+---
+
 ## 🏗️ Architecture
 
 ```mermaid
@@ -101,6 +113,7 @@ ai-trading-research/
 │   ├── lib/
 │   └── .env.example
 ├── data/                     # synthetic sample OHLC data (NIFTY/BANKNIFTY/SENSEX)
+├── docs/screenshots/         # frontend screenshots used in this README
 ├── README.md
 ├── THINKING_NOTE.md
 ├── AI_USAGE_NOTE.md
@@ -123,8 +136,8 @@ uvicorn app.main:app --reload --port 8000
 Backend: `http://localhost:8000` · Interactive API docs: `http://localhost:8000/docs`
 
 > **Python version note:** if you're on a very new Python release (3.13/3.14) and pandas/numpy
-> try to compile from source, see the pinned-version note inside `backend/requirements.txt` —
-> leaving them unpinned lets pip pull versions with prebuilt wheels.
+> try to compile from source, see the note inside `backend/requirements.txt` — leaving them
+> unpinned lets pip pull versions with prebuilt wheels.
 
 ### 2. Frontend
 
@@ -200,8 +213,7 @@ Never commit real `.env` files — only the `.env.example` templates are tracked
 - **Insufficient evidence** — small trade counts are explicitly flagged, never treated as statistically conclusive.
 - Not a production backtester: single-position, non-overlapping trades, no order-book realism.
 
-See `THINKING_NOTE.md` for the full reasoning behind these tradeoffs, and `README.md`'s
-"What would be improved" section below.
+See `THINKING_NOTE.md` for the full reasoning behind these tradeoffs.
 
 ### What would be improved with more time
 - Real, vetted historical market data instead of synthetic data.
@@ -223,5 +235,3 @@ See `THINKING_NOTE.md` for the full reasoning behind these tradeoffs, and `READM
 
 Prototype for research and educational purposes only. Results are based on simulated/sample
 data and do **not** constitute financial advice or a guarantee of future performance.
-#   a i - t r a d i n g - r e s e a r c h - a s s i s t a n t  
- 
